@@ -1,0 +1,22 @@
+# Ignore backup/swap files (for certain editors)
+*~
+
+# Ignore anything in the "extra" directory for the purpose
+# of storing things that don't need to bemanaged by git
+# (such as binaries specific to a certain computer)
+extra/
+
+# Ignore things in the backup directory
+# It is used to store backups of files that would
+# otherwise be overwritten by bootstrap.sh
+backup/
+
+# Ignore any files in an ssh or .ssh directory,
+# but allow public keys and authorized_keys file(s)
+**/ssh/**
+**/.ssh/**
+!**/ssh/*.pub
+!**/.ssh/*.pub
+!**/ssh/authorized_keys
+!**/.ssh/authorized_keys
+
