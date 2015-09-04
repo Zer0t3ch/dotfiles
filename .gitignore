@@ -20,3 +20,5 @@ backup/
 !**/ssh/authorized_keys
 !**/.ssh/authorized_keys
 
+# Ignore manual backup files
+*.bak
