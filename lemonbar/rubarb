@@ -1,0 +1,66 @@
+#!/bin/ruby
+threads = []
+time = Time.now
+hLeft = Hash.new
+hRght = Hash.new
+hCent = Hash.new
+
+# ============================
+# |       Initial Math       |
+# ============================
+barH = 24
+barW = 1900
+screenSize = [ 1920, 1080 ]
+padding = ((screenSize[0] - barW) / 2).round(0)
+
+# ===========================
+# | Individual update Loops |
+# ===========================
+threads << Thread.new do # Date Loop
+	loop do
+		sleep 0.5
+		time = Time.now
+		hCent[:date] = time.strftime "%Y-%m-%d [[ "
+	end
+end
+threads << Thread.new do # Time Loop
+	loop do
+		sleep 1
+		hCent[:time] = time.strftime " ]] %I:%M:%S %p"
+	end
+end
+
+# ====================
+# | Main update loop |
+# ====================
+IO.popen("lemonbar -g #{barW}x#{barH}+#{padding}+#{padding}", 'w+') do |io|
+	loop do
+		io.print "%{l}"
+		# Print left-aligned things
+		hLeft.each do |x,y|
+			io.print y
+		end
+
+		# Print center-aligned things
+		io.print "%{c}"
+		hCent.each do |x,y|
+			io.print y
+		end
+
+		# Print right-aligned things
+		io.print "%{r}"
+		hRght.each do |x,y|
+			io.print y
+		end
+
+		# Properly flush STDOUT so that lemonbar will display the output
+		io.print "\n"
+		io.flush
+
+		# Sleep for 1/5 of a second between updates
+		sleep 0.2
+	end
+end
+
+# In case of problems, wait for all threads to finish
+threads.each { |x| x.join }
