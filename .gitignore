@@ -1,5 +1,6 @@
 # Ignore backup/swap files (for certain editors)
 *~
+*.swp
 
 # Ignore anything in the "extra" directory for the purpose
 # of storing things that don't need to bemanaged by git
