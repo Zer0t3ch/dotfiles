@@ -1,0 +1,4 @@
+#!/bin/bash
+git clone https://github.com/Zer0t3ch/dotfiles.git ${HOME}/dotfiles
+cd ${HOME}/dotfiles
+./bootstrap.sh
