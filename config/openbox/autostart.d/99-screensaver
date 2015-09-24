@@ -1,0 +1,4 @@
+#!/bin/bash
+xautolock -locker ~/bin/xlocker -nowlocker ~/bin/xlocker -time 30 &
+
+echo 99-screensaver

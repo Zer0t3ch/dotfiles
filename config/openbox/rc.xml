@@ -238,7 +238,7 @@
         </keybind>
         <keybind key="W-l">
             <action name="Execute">
-                <command>/home/chaos/bin/locker</command>
+                <command>xautolock -locknow</command>
             </action>
         </keybind>
         <keybind key="W-t">
