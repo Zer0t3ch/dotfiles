@@ -1,0 +1,15 @@
+#!/bin/ruby
+devSpeed = 0.8
+inputs = `xinput list`
+idList = inputs.split("\n")
+idList.collect! do |s|
+	if s.include? 'Corsair' and s.include? 'pointer'
+		s.gsub(/.*id=/,'').gsub(/[^0-9].*/,'')
+	else
+		''
+	end
+end
+idList.delete('')
+idList.each do |id|
+	exec "xinput set-prop #{id} \"Coordinate Transformation Matrix\" #{devSpeed} 0 0 0 #{devSpeed} 0 0 0 1"
+end
