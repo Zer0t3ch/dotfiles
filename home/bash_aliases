@@ -1,0 +1,36 @@
+#!/bin/bash
+####### Setting Savers #######
+##############################
+alias ls="ls --color=always"
+alias lsblk="lsblk --output=label,name,maj:min,ro,size,type,fstype,mountpoint,uuid"
+
+
+
+########## Shortcuts ##########
+###############################
+# Directory Listing (ls)
+alias ll="ls -l"
+alias la="ll -a"
+alias l="la"
+
+
+# Output Piping (grep)
+alias igrep="grep -i"
+alias vgrep="grep -v"
+alias ivgrep="grep -iv"
+
+
+# Git
+alias g="git"
+
+
+# Misc
+alias sym="ln -s"
+alias pamac="yaourt"
+alias print="echo -ne"
+
+
+########## Fun Ones ##########
+##############################
+alias fucking="sudo"
+alias elevate="sudo"

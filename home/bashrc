@@ -1,0 +1,170 @@
+#!/bin/bash
+# /=======================================\
+# |                                       |
+# |         Normal Bash Bullshit          |
+# |                                       |
+# \=======================================/
+export LANG="en_US.UTF-8"
+export LC_ALL="en_US.UTF-8"
+export PATH="$PATH:$HOME/bin:$HOME/opt/bin"
+export DISTRIB_ID=arch
+export DISTRIB_RELEASE=$(uname -r)
+
+
+. ${HOME}/.bash_colors
+
+# Load alias scripts if they exist
+[[ -x "$HOME/.alias" ]] && source "$HOME/.alias"
+[[ -x "$HOME/.aliases" ]] && source "$HOME/.aliases"
+[[ -x "$HOME/.bash_aliases" ]] && source "$HOME/.bash_aliases"
+
+# Quit the script if not an interactive shell
+[ -z "$PS1" ] && return
+
+
+# Check the window size after each command and, if
+# necessary, update the values of LINES and COLUMNS.
+shopt -s checkwinsize
+
+
+# If this is an xterm set the title to user@host:dir
+case "$TERM" in
+xterm*|rxvt*)
+    PROMPT_COMMAND='echo -ne "\033]0;${USER}@${HOSTNAME}: ${PWD}\007"'
+    ;;
+*)
+    ;;
+esac
+
+
+# enable bash completion in interactive shells
+if ! shopt -oq posix; then
+  if [ -f /usr/share/bash-completion/bash_completion ]; then
+    . /usr/share/bash-completion/bash_completion
+  elif [ -f /etc/bash_completion ]; then
+    . /etc/bash_completion
+  fi
+fi
+
+
+# if the command-not-found package is installed, use it
+if [ -x /usr/lib/command-not-found -o -x /usr/share/command-not-found/command-not-found ]; then
+	function command_not_found_handle {
+	        # check because c-n-f could've been removed in the meantime
+                if [ -x /usr/lib/command-not-found ]; then
+		   /usr/lib/command-not-found -- "$1"
+                   return $?
+                elif [ -x /usr/share/command-not-found/command-not-found ]; then
+		   /usr/share/command-not-found/command-not-found -- "$1"
+                   return $?
+		else
+		   printf "%s: command not found\n" "$1" >&2
+		   return 127
+		fi
+	}
+fi
+
+
+
+
+# /=======================================\
+# |                                       |
+# |               Functions               |
+# |                                       |
+# \=======================================/
+
+
+function fn_execute_if_exists {
+	if [[ -x "$1" ]]; then
+		. "$1"
+		return 0
+	fi
+	return 1
+}
+
+function fn_in_path {
+	local found=0
+	for d in $(echo $PATH | tr ":" "\n"); do
+		if [[ -x "${d}/$1" ]]; then
+			found=1
+			break
+		fi
+	done
+	echo $found
+}
+
+
+
+
+# /=======================================\
+# |                                       |
+# |             Customization             |
+# |                                       |
+# \=======================================/
+
+
+# Prompt Function
+function prompt_1 {
+	uid="$(id -u)"
+	cols="$(tput cols)"
+	print "\n\n${txtred}${tlcorn}"
+  x=$cols
+  while true; do
+    x=$(expr $x - 1)
+    if [[ $x -eq 22 ]]; then
+      break
+    fi
+      print "${horlin}"
+  done
+  print "${rtshap} "
+  print "\$(date +'%m/%e %I:%M:%S %P')"
+	print " ${ltshap}${horlin}\n"
+	print "${txtred}${vrtlin} ${txtylw}\w\n"
+	print "${txtred}${vrtlin} ${txtcyn}[\u@\h]\$(tput sc)"
+	if [[ $uid -eq 0 ]]; then
+		print "${txtred}#"
+	else
+		print "${txtgrn}$"
+	fi
+	print "${txtrst} "
+}
+
+
+# Set the prompts
+#export PS1="${bldcyn}[\u ${txtred}\w${bldcyn}]${txtrst}${bldgrn}\$ ${txtrst}"
+#export PS1="$(prompt_1)"
+export PS1="\n${txtred}\w\n${txtcyn}[\u @ \h]${bldgrn}\$ ${txtrst}"
+
+# Export other variables
+export SYSNAME=`uname -s`
+if [[ $SYSNAME == MINGW* ]]; then
+	export EDITOR="notepad.exe"
+else
+	if [[ $(fn_in_path vim) == 1 ]]; then
+		export EDITOR="vim"
+	elif [[ $(fn_in_path nano) == 1 ]]; then
+		export EDITOR="nano"
+	elif [[ $(fn_in_path vi) == 1 ]]; then
+		export EDITOR="vi"
+	else
+		echo "No viable editor found, check your \$PATH"
+	fi
+fi
+
+
+
+
+# /=======================================\
+# |                                       |
+# |        Initialization Commands        |
+# |                                       |
+# \=======================================/
+
+
+# Run archey if it's installed
+if [[ `fn_in_path archey3` == 1 ]]; then archey3
+elif [[ `fn_in_path archey` == 1 ]]; then archey; fi
+
+
+# Set up ssh-agent and environment variables
+[ -x "$HOME/bin/start-ssh-agent" ] && . "$HOME/bin/start-ssh-agent"

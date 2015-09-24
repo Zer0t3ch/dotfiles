@@ -9,3 +9,15 @@
     - bspwm
     - sxhkd
     - lemonbar
+
+- name: Symlink dotfiles to $HOME
+  file: src=~/dotfiles/home/{{ item }}
+        dest=~/.{{ item }}
+        state=link
+        force=yes
+  with_items:
+    - bashrc
+    - bash_colors
+    - bash_profile
+    - bash_aliases
+    - Xresources
