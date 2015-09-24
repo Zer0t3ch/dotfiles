@@ -168,6 +168,16 @@
     </dock>
     <keyboard>
         <chainQuitKey>C-g</chainQuitKey>
+        <keybind key="C-A-S-c">
+            <action name="Execute">
+                <command>pkill conky</command>
+            </action>
+        </keybind>
+        <keybind key="C-A-c">
+            <action name="Execute">
+                <command>/usr/bin/conky -d</command>
+            </action>
+        </keybind>
         <keybind key="A-Return">
             <action name="Execute">
                 <command>urxvtc</command>
