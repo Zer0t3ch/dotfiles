@@ -5,5 +5,3 @@ for file in ./autostart.d/*
 do
 	. ${file} >> ${HOME}/.config/openbox/autostart.log
 done
-# rm /tmp/.esd-1000/socket
-
