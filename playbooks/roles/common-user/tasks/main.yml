@@ -11,10 +11,6 @@
         state=link
         force=yes
   with_items:
-    - bspwm
-    - sxhkd
-    - lemonbar
-    - openbox
     - conky
 
 - name: Symlink dotfiles to $HOME
