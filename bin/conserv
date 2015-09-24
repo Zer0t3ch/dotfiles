@@ -1,0 +1,20 @@
+#!/bin/bash
+
+
+#ds4drv \
+#	--config=~/.config/ds4drv.conf --next-controller \
+#	--config=~/.config/ds4drv.conf --next-controller \
+#	--config=~/.config/ds4drv.conf --next-controller \
+#	--config=~/.config/ds4drv.conf &
+
+
+pkill xboxdrv
+sleep 1
+xboxdrv --detach-kernel-driver --dbus disabled --silent --detach -w 0 --led 2 --mimic-xpad &
+ds4drv
+sleep 1
+xboxdrv --detach-kernel-driver --dbus disabled --silent --detach -w 1 --led 3 --mimic-xpad  &
+sleep 1
+xboxdrv --detach-kernel-driver --dbus disabled --silent --detach -w 2 --led 4 --mimic-xpad  &
+sleep 1
+xboxdrv --detach-kernel-driver --dbus disabled --silent --detach -w 3 --led 5 --mimic-xpad  &
