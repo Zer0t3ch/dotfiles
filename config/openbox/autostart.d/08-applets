@@ -1,0 +1,23 @@
+#!/bin/bash
+# Package management/updating
+pamac-tray &
+
+
+# Pulseaudio
+# pa-applet &
+
+
+# NetworkManager
+nm-applet &
+
+
+# Bluetooth Management
+# blueman-applet &
+blueberry-applet &
+
+
+# Nvidia Settings
+nvdock &
+
+
+echo 08-applets

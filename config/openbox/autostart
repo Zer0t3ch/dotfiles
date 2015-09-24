@@ -1,0 +1,9 @@
+#!/bin/bash
+cd $(dirname $0)
+[ -f "./autostart.log" ] && rm "./autostart.log"
+for file in ./autostart.d/*
+do
+	. ${file} >> ${HOME}/.config/openbox/autostart.log
+done
+# rm /tmp/.esd-1000/socket
+

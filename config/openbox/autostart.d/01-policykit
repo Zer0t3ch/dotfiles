@@ -1,0 +1,5 @@
+#!/bin/bash
+lxqt-policykit-agent &
+
+
+echo 01-policykit

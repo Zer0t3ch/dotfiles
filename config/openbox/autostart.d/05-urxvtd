@@ -1,0 +1,5 @@
+#!/bin/bash
+urxvtd -q -o -f
+
+
+echo 05-urxvtd

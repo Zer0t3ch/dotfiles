@@ -1,0 +1,6 @@
+#!/bin/bash
+${HOME}/bin/mousefix
+
+
+
+echo 99-mouse

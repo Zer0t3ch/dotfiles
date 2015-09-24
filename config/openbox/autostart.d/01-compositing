@@ -1,0 +1,5 @@
+#!/bin/bash
+compton --vsync opengl &
+
+
+echo 01-compositing

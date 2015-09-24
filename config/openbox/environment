@@ -1,0 +1,5 @@
+#!/bin/bash
+export PATH="${PATH}:${HOME}/bin"
+export XTERM="urxvt"
+export XEDIT="medit"
+export EDITOR="vim"

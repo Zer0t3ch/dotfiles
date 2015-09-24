@@ -9,6 +9,7 @@
     - bspwm
     - sxhkd
     - lemonbar
+    - openbox
 
 - name: Symlink dotfiles to $HOME
   file: src=~/dotfiles/home/{{ item }}

@@ -1,0 +1,6 @@
+#!/bin/bash
+pulseaudio --start
+pacmd set-default-sink "alsa_output.usb-Corsair_Vengeance_2100-00.analog-stereo"
+
+
+echo 03-audio

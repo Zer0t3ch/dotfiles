@@ -1,0 +1,5 @@
+#!/bin/bash
+tint2 &
+
+
+echo 07-panel

@@ -1,0 +1,5 @@
+#!/bin/bash
+numlockx on &
+
+
+echo 99-numlock

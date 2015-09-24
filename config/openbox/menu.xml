@@ -1,0 +1,549 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openbox_menu>
+	<menu id="root-menu" label="OpenBox 3">
+		<item label="Terminal Emulator">
+			<action name="Execute">
+				<execute>urxvtc</execute>
+			</action>
+		</item>
+		<item label="File Manager">
+			<action name="Execute">
+				<execute>thunar</execute>
+			</action>
+		</item>
+		<item label="Web Browser">
+			<action name="Execute">
+				<execute>google-chrome-stable</execute>
+			</action>
+		</item>
+		<item label="Email">
+			<action name="Execute">
+				<execute>geary</execute>
+			</action>
+		</item>
+		<separator/>
+		<menu id="1" label="Development">
+		</menu>
+		<menu id="root-menu-474326" label="Games">
+			<!--<menu execute="/home/chaos/.steamhome/steam-pipe.sh" id="steampipe" label="Steam"/>-->
+			<item label="Factorio">
+				<action name="Execute">
+					<execute>~/bin/factorio/bin/x64/factorio</execute>
+				</action>
+			</item>
+			<item label="Kerbal Space Program">
+				<action name="Execute">
+					<execute>/mnt/ssdata/steamlin/steamapps/common/Kerbal Space Program/KSP.x86_64</execute>
+				</action>
+			</item>
+		</menu>
+		<menu id="2" label="Editors">
+			<item label="medit">
+				<action name="Execute">
+					<execute>medit</execute>
+				</action>
+			</item>
+			<item label="Mousepad">
+				<action name="Execute">
+					<execute>mousepad</execute>
+				</action>
+			</item>
+			<item label="Nano">
+				<action name="Execute">
+					<execute>${XTERM} -e nano</execute>
+				</action>
+			</item>
+			<item label="Vi">
+				<action name="Execute">
+					<execute>${XTERM} -e vi</execute>
+				</action>
+			</item>
+			<item label="Vim">
+				<action name="Execute">
+					<execute>${XTERM} -e vim</execute>
+				</action>
+			</item>
+		</menu>
+		<menu id="7" label="Multimedia">
+			<item label="XFCE Mixer">
+				<action name="Execute">
+					<execute>xfce4-mixer</execute>
+				</action>
+			</item>
+			<item label="AUmix">
+				<action name="Execute">
+					<execute>${XTERM} -e aumix</execute>
+				</action>
+			</item>
+			<item label="PulseAudio Volume Control">
+				<action name="Execute">
+					<execute>pavucontrol</execute>
+				</action>
+			</item>
+			<item label="Xaumix">
+				<action name="Execute">
+					<execute>xaumix</execute>
+				</action>
+			</item>
+		</menu>
+		<separator/>
+		<menu id="5" label="Network">
+			<item label="Avahi SSH Server Browser">
+				<action name="Execute">
+					<execute>bssh</execute>
+				</action>
+			</item>
+			<item label="Avahi VNC Server Browser">
+				<action name="Execute">
+					<execute>bvnc</execute>
+				</action>
+			</item>
+			<item label="FireFox">
+				<action name="Execute">
+					<execute>firefox</execute>
+				</action>
+			</item>
+			<item label="FTP">
+				<action name="Execute">
+					<execute>rxvt -e ftp</execute>
+				</action>
+			</item>
+			<item label="Geary">
+				<action name="Execute">
+					<execute>geary</execute>
+				</action>
+			</item>
+			<item label="Google Chrome">
+				<action name="Execute">
+					<execute>google-chrome-stable</execute>
+				</action>
+			</item>
+			<item label="Mail">
+				<action name="Execute">
+					<execute>rxvt -e mail</execute>
+				</action>
+			</item>
+			<item label="Mail Reader">
+				<action name="Execute">
+					<execute>exo-open --launch MailReader</execute>
+				</action>
+			</item>
+			<item label="Steam">
+				<action name="Execute">
+					<execute>steam</execute>
+				</action>
+			</item>
+			<item label="Talk">
+				<action name="Execute">
+					<execute>rxvt -e talk</execute>
+				</action>
+			</item>
+			<item label="Telnet">
+				<action name="Execute">
+					<execute>rxvt -e telnet</execute>
+				</action>
+			</item>
+			<item label="Web Browser">
+				<action name="Execute">
+					<execute>exo-open --launch WebBrowser</execute>
+				</action>
+			</item>
+		</menu>
+		<menu id="39" label="Other">
+			<item label="Alacarte">
+				<action name="Execute">
+					<execute>alacarte</execute>
+				</action>
+			</item>
+			<item label="CMake">
+				<action name="Execute">
+					<execute>cmake-gui</execute>
+				</action>
+			</item>
+			<item label="PulseAudio Preferences">
+				<action name="Execute">
+					<execute>paprefs</execute>
+				</action>
+			</item>
+			<item label="tX">
+				<action name="Execute">
+					<execute>tx</execute>
+				</action>
+			</item>
+		</menu>
+		<menu id="19" label="Shells">
+			<item label="GIT">
+				<action name="Execute">
+					<execute>rxvt -e git</execute>
+				</action>
+			</item>
+			<item label="Root Terminal">
+				<action name="Execute">
+					<execute>gksu -l gnome-terminal</execute>
+				</action>
+			</item>
+			<item label="Rxvt">
+				<action name="Execute">
+					<execute>rxvt</execute>
+				</action>
+			</item>
+			<item label="Thunar File Manager">
+				<action name="Execute">
+					<execute>thunar</execute>
+				</action>
+			</item>
+			<item label="UXTerm">
+				<action name="Execute">
+					<execute>uxterm</execute>
+				</action>
+			</item>
+			<item label="Xfce Terminal">
+				<action name="Execute">
+					<execute>xfce4-terminal</execute>
+				</action>
+			</item>
+			<item label="Xterm">
+				<action name="Execute">
+					<execute>xterm</execute>
+				</action>
+			</item>
+		</menu>
+		<menu id="37" label="System">
+			<menu id="36" label="Settings">
+				<menu id="21" label="GNOME">
+					<item label="Adobe Flash Player">
+						<action name="Execute">
+							<execute>flash-player-properties</execute>
+						</action>
+					</item>
+					<item label="Bluetooth Manager">
+						<action name="Execute">
+							<execute>blueman-manager</execute>
+						</action>
+					</item>
+					<item label="Network Connections">
+						<action name="Execute">
+							<execute>nm-connection-editor</execute>
+						</action>
+					</item>
+					<item label="Privilege granting">
+						<action name="Execute">
+							<execute>gksu-properties</execute>
+						</action>
+					</item>
+				</menu>
+				<menu id="35" label="Xfce">
+					<item label="Bluetooth Adapters">
+						<action name="Execute">
+							<execute>blueman-adapters</execute>
+						</action>
+					</item>
+					<item label="Settings Manager">
+						<action name="Execute">
+							<execute>xfce4-settings-manager</execute>
+						</action>
+					</item>
+				</menu>
+				<item label="Accessibility">
+					<action name="Execute">
+						<execute>xfce4-accessibility-settings</execute>
+					</action>
+				</item>
+				<item label="Appearance">
+					<action name="Execute">
+						<execute>xfce4-appearance-settings</execute>
+					</action>
+				</item>
+				<item label="ARandR">
+					<action name="Execute">
+						<execute>arandr</execute>
+					</action>
+				</item>
+				<item label="Arvo config">
+					<action name="Execute">
+						<execute>roccatarvoconfig</execute>
+					</action>
+				</item>
+				<item label="Desktop">
+					<action name="Execute">
+						<execute>xfdesktop-settings</execute>
+					</action>
+				</item>
+				<item label="Display">
+					<action name="Execute">
+						<execute>xfce4-display-settings</execute>
+					</action>
+				</item>
+				<item label="File Manager">
+					<action name="Execute">
+						<execute>thunar-settings</execute>
+					</action>
+				</item>
+				<item label="Isku config">
+					<action name="Execute">
+						<execute>roccatiskuconfig</execute>
+					</action>
+				</item>
+				<item label="IskuFX config">
+					<action name="Execute">
+						<execute>roccatiskufxconfig</execute>
+					</action>
+				</item>
+				<item label="Keyboard">
+					<action name="Execute">
+						<execute>xfce4-keyboard-settings</execute>
+					</action>
+				</item>
+				<item label="Kone config">
+					<action name="Execute">
+						<execute>roccatkoneconfig</execute>
+					</action>
+				</item>
+				<item label="Kone[+] config">
+					<action name="Execute">
+						<execute>roccatkoneplusconfig</execute>
+					</action>
+				</item>
+				<item label="KonePure config">
+					<action name="Execute">
+						<execute>roccatkonepureconfig</execute>
+					</action>
+				</item>
+				<item label="KonePureMilitary config">
+					<action name="Execute">
+						<execute>roccatkonepuremilitaryconfig</execute>
+					</action>
+				</item>
+				<item label="KonePureOptical config">
+					<action name="Execute">
+						<execute>roccatkonepureopticalconfig</execute>
+					</action>
+				</item>
+				<item label="KoneXTD config">
+					<action name="Execute">
+						<execute>roccatkonextdconfig</execute>
+					</action>
+				</item>
+				<item label="KoneXTDOptical config">
+					<action name="Execute">
+						<execute>roccatkonextdopticalconfig</execute>
+					</action>
+				</item>
+				<item label="Kova[+] config">
+					<action name="Execute">
+						<execute>roccatkovaplusconfig</execute>
+					</action>
+				</item>
+				<item label="Lua config">
+					<action name="Execute">
+						<execute>roccatluaconfig</execute>
+					</action>
+				</item>
+				<item label="MIME Type Editor">
+					<action name="Execute">
+						<execute>xfce4-mime-settings</execute>
+					</action>
+				</item>
+				<item label="Mouse and Touchpad">
+					<action name="Execute">
+						<execute>xfce4-mouse-settings</execute>
+					</action>
+				</item>
+				<item label="NVIDIA X Server Settings">
+					<action name="Execute">
+						<execute>nvidia-settings</execute>
+					</action>
+				</item>
+				<item label="Openbox Configuration Manager">
+					<action name="Execute">
+						<execute>obconf</execute>
+					</action>
+				</item>
+				<item label="Panel">
+					<action name="Execute">
+						<execute>xfce4-panel --preferences</execute>
+					</action>
+				</item>
+				<item label="Power Manager">
+					<action name="Execute">
+						<execute>xfce4-power-manager-settings</execute>
+					</action>
+				</item>
+				<item label="Preferred Applications">
+					<action name="Execute">
+						<execute>exo-preferred-applications</execute>
+					</action>
+				</item>
+				<item label="Pyra config">
+					<action name="Execute">
+						<execute>roccatpyraconfig</execute>
+					</action>
+				</item>
+				<item label="Removable Drives and Media">
+					<action name="Execute">
+						<execute>thunar-volman-settings</execute>
+					</action>
+				</item>
+				<item label="Ryos MK config">
+					<action name="Execute">
+						<execute>roccatryosmkconfig</execute>
+					</action>
+				</item>
+				<item label="Ryos TKL config">
+					<action name="Execute">
+						<execute>roccatryostklconfig</execute>
+					</action>
+				</item>
+				<item label="Savu config">
+					<action name="Execute">
+						<execute>roccatsavuconfig</execute>
+					</action>
+				</item>
+				<item label="Session and Startup">
+					<action name="Execute">
+						<execute>xfce4-session-settings</execute>
+					</action>
+				</item>
+				<item label="Settings Editor">
+					<action name="Execute">
+						<execute>xfce4-settings-editor</execute>
+					</action>
+				</item>
+				<item label="Tyon config">
+					<action name="Execute">
+						<execute>roccattyonconfig</execute>
+					</action>
+				</item>
+				<item label="Window Manager">
+					<action name="Execute">
+						<execute>xfwm4-settings</execute>
+					</action>
+				</item>
+				<item label="Window Manager Tweaks">
+					<action name="Execute">
+						<execute>xfwm4-tweaks-settings</execute>
+					</action>
+				</item>
+				<item label="Workspaces">
+					<action name="Execute">
+						<execute>xfwm4-workspace-settings</execute>
+					</action>
+				</item>
+			</menu>
+			<item label="Add/Remove Software">
+				<action name="Execute">
+					<execute>pamac-manager</execute>
+				</action>
+			</item>
+			<item label="Avahi Zeroconf Browser">
+				<action name="Execute">
+					<execute>avahi-discover</execute>
+				</action>
+			</item>
+			<item label="Bulk Rename">
+				<action name="Execute">
+					<execute>/usr/lib/Thunar/ThunarBulkRename</execute>
+				</action>
+			</item>
+			<item label="GParted">
+				<action name="Execute">
+					<execute>gparted_polkit</execute>
+				</action>
+			</item>
+			<item label="Htop">
+				<action name="Execute">
+					<execute>rxvt -e htop</execute>
+				</action>
+			</item>
+			<item label="Log Out">
+				<action name="Execute">
+					<execute>xfce4-session-logout</execute>
+				</action>
+			</item>
+			<item label="Software Update">
+				<action name="Execute">
+					<execute>pamac-updater</execute>
+				</action>
+			</item>
+		</menu>
+		<menu id="38" label="Utilities">
+			<item label="About Xfce">
+				<action name="Execute">
+					<execute>xfce4-about</execute>
+				</action>
+			</item>
+			<item label="Application Finder">
+				<action name="Execute">
+					<execute>xfce4-appfinder</execute>
+				</action>
+			</item>
+			<item label="File Manager">
+				<action name="Execute">
+					<execute>exo-open --launch FileManager</execute>
+				</action>
+			</item>
+			<item label="Run Program...">
+				<action name="Execute">
+					<execute>xfce4-appfinder --collapsed</execute>
+				</action>
+			</item>
+			<item label="Terminal Emulator">
+				<action name="Execute">
+					<execute>exo-open --launch TerminalEmulator</execute>
+				</action>
+			</item>
+		</menu>
+		<separator/>
+		<menu id="40" label="OpenBox">
+			<menu id="40-521057" label="Configure">
+				<item label="obconf">
+					<action name="Execute">
+						<execute>obconf</execute>
+					</action>
+				</item>
+				<item label="obmenu">
+					<action name="Execute">
+						<execute>obmenu</execute>
+					</action>
+				</item>
+				<item label="obapps">
+					<action name="Execute">
+						<execute>obapps</execute>
+					</action>
+				</item>
+				<item label="obkey">
+					<action name="Execute">
+						<execute>obkey</execute>
+					</action>
+				</item>
+			</menu>
+			<menu id="40-464530" label="Customize">
+				<item label="gtk2_prefs">
+					<action name="Execute">
+						<execute>gtk2_prefs</execute>
+					</action>
+				</item>
+				<item label="gtk2fontsel">
+					<action name="Execute">
+						<execute>gtk2fontsel</execute>
+					</action>
+				</item>
+				<item label="lxappearance">
+					<action name="Execute">
+						<execute>lxappearance</execute>
+					</action>
+				</item>
+			</menu>
+			<item label="Reload">
+				<action name="Reconfigure"/>
+			</item>
+			<separator/>
+			<menu id="client-list-menu"/>
+			<item label="Logout">
+				<action name="Execute">
+					<execute>oblogout</execute>
+				</action>
+			</item>
+		</menu>
+	</menu>
+</openbox_menu>
