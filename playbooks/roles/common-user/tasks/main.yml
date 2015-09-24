@@ -15,6 +15,7 @@
     - sxhkd
     - lemonbar
     - openbox
+    - conky
 
 - name: Symlink dotfiles to $HOME
   file: src=~/dotfiles/home/{{ item }}
