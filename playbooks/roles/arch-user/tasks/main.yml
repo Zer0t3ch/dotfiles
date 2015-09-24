@@ -4,6 +4,7 @@
   file: path=~/{{ item }}
   with_items:
     - .config
+    - bin
 
 - name: Symlink configuration files to XDG_CONFIG_HOME
   file: src=~/dotfiles/config/{{ item }}
@@ -15,3 +16,13 @@
     - sxhkd
     - lemonbar
     - openbox
+
+- name: Symlink scripts/binaries to HOME/bin
+  file: src=~/dotfiles/bin/{{ item }}
+        dest=~/bin/{{ item }}
+        state=link
+        force=yes
+  with_items:
+    - conserv
+    - mousefix
+    - xlocker
