@@ -23,3 +23,6 @@ backup/
 
 # Ignore manual backup files
 *.bak
+
+# Ignore log files
+*.log
