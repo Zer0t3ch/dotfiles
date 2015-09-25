@@ -6,9 +6,9 @@
 # \=======================================/
 export LANG="en_US.UTF-8"
 export LC_ALL="en_US.UTF-8"
-export PATH="$PATH:$HOME/bin:$HOME/opt/bin"
 export DISTRIB_ID=arch
 export DISTRIB_RELEASE=$(uname -r)
+[[ -z "$(echo $PATH | grep -e /home/.*/bin)" ]] && export PATH="$PATH:$HOME/bin"
 
 
 . ${HOME}/.bash_colors
