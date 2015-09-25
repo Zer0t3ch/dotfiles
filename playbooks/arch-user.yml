@@ -2,5 +2,4 @@
 ---
 - hosts: localhost
   roles:
-    - role: common-user
-    - role: arch-user
+    - role: linux-user
