@@ -752,10 +752,6 @@
             <application title="TeamSpeak 3">
                 <desktop>6</desktop>
                 <monitor>2</monitor>
-                <position force="yes">
-                    <x>right</x>
-                    <y>top</y>
-                </position>
             </application>
             <application name="csgo_linux">
                 <desktop>6</desktop>
