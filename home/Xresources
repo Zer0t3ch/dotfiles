@@ -61,8 +61,8 @@ URxvt*thickness:						12
 
 
 !--- Cursor
-URxvt*cursorUnderline:					true
-URxvt*cursorBlink:						false
+URxvt*cursorUnderline:					false
+URxvt*cursorBlink:						true
 
 
 !--- Keysyms
