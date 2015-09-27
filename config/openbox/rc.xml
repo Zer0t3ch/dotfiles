@@ -247,9 +247,14 @@
                 <command>urxvtc</command>
             </action>
         </keybind>
+        <keybind key="W-w">
+            <action name="Execute">
+                <command>google-chrome-stable</command>
+            </action>
+        </keybind>
         <keybind key="W-e">
             <action name="Execute">
-                <command>thunar ~</command>
+                <command>thunar</command>
             </action>
         </keybind>
         <keybind key="A-F2">
