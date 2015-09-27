@@ -2,6 +2,7 @@
 ---
 - name: Create any missing directories needed for deployment
   file: path=~/{{ item }}
+        state=directory
   with_items:
     - .config
     - bin
