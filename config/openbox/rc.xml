@@ -356,6 +356,9 @@
             <!-- Set this to TRUE to move the mouse pointer across the desktop when switching due to hitting the edge of the screen -->
         </screenEdgeWarpMouse>
         <context name="Frame">
+            <mousebind action="DoubleClick" button="A-Left">
+                <action name="ToggleMaximize"/>
+            </mousebind>
             <mousebind action="Press" button="A-Left">
                 <action name="Focus"/>
                 <action name="Raise"/>
@@ -757,6 +760,15 @@
             <application title="TeamSpeak 3">
                 <desktop>6</desktop>
                 <monitor>2</monitor>
+            </application>
+            <application title="ARK: Survival Evolved">
+                <desktop>6</desktop>
+                <decor>no</decor>
+                <position force="yes">
+                    <x>center</x>
+                    <y>center</y>
+                </position>
+                <fullscreen>yes</fullscreen>
             </application>
             <application name="csgo_linux">
                 <desktop>6</desktop>
