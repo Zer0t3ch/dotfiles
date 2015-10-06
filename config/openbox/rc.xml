@@ -204,6 +204,11 @@
                 <command>i3lock</command>
             </action>
         </keybind>
+        <keybind key="XF86Calculator">
+            <action name="Execute">
+                <command>gnome-calculator</command>
+            </action>
+        </keybind>
         <keybind key="Print">
             <action name="Execute">
                 <command>imgur-screenshot</command>
@@ -760,6 +765,15 @@
             <application title="TeamSpeak 3">
                 <desktop>6</desktop>
                 <monitor>2</monitor>
+            </application>
+            <application title="UnturnDD">
+                <desktop>6</desktop>
+                <decor>no</decor>
+                <position force="yes">
+                    <x>center</x>
+                    <y>center</y>
+                </position>
+                <fullscreen>yes</fullscreen>
             </application>
             <application title="ARK: Survival Evolved">
                 <desktop>6</desktop>
