@@ -254,7 +254,7 @@
         </keybind>
         <keybind key="W-w">
             <action name="Execute">
-                <command>google-chrome-stable</command>
+                <command>google-chrome-beta</command>
             </action>
         </keybind>
         <keybind key="W-e">
