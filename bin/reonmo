@@ -1,0 +1,9 @@
+#!/bin/bash
+while true; do
+	$2 &
+	PID=$!
+	sleep 1
+	inotifywait -e modify "$1"
+	kill $PID
+	clear
+done

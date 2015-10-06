@@ -1,0 +1,11 @@
+#!/bin/bash
+SSH_AUTH_SOCK=$(ls -l /tmp/ssh-*/agent.* 2> /dev/null | grep $(whoami) -m 1 | awk '{print $9}')
+[ -n `echo $SSH_AUTH_SOCK | sed 's/.*\.//g'` ] && SSH_AGENT_PID=$(expr `echo $SSH_AUTH_SOCK | sed 's/.*\.//g' | sed 's/[^0-9].*//g'` + 1);
+[ -n "$SSH_AUTH_SOCK" ] && export SSH_AUTH_SOCK
+[ -n "$SSH_AGENT_PID" ] && export SSH_AGENT_PID
+
+# start agent if necessary
+if [ -z $SSH_AUTH_SOCK ] && [ -z $SSH_TTY ]; then  # if no agent & not in ssh
+  for l in "`ssh-agent -s`"; do eval $l > /dev/null; done
+fi
+

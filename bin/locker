@@ -1,0 +1,9 @@
+#!/bin/bash
+mkdir -p /tmp/locker
+scrot /tmp/locker/screen.png
+convert /tmp/locker/screen.png -scale 10% -scale 1000% /tmp/locker/screen.png
+# [[ -f ${HOME}/Pictures/icons/lock.png ]] && convert '${HOME}/Pictures/icons/lock.png' -scale '1024x1024!' '/tmp/locker/lock.png'
+# [[ -f ${HOME}/Pictures/icons/lock.png ]] && convert '/tmp/locker/screen.png' '${HOME}/Pictures/icons/lock.png' -gravity 'Center' -composite -matte '/tmp/locker/screen.png'
+i3lock -i /tmp/locker/screen.png -e -f
+#	-d -I 60
+rm -Rf /tmp/locker

@@ -1,0 +1,2 @@
+#!/bin/bash
+obxprop | grep "^_OB_APP" | cut -d_ -f4-

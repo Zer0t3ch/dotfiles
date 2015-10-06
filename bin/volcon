@@ -1,0 +1,15 @@
+#!/usr/bin/ruby
+# vim: set ts=4 sts=4 sw=4 noet ai:
+if ARGV.length > 0
+	command = ARGV[0]
+else
+	puts "Please provide a command"
+	exit 1
+end
+
+
+
+
+
+if command == "up"
+	

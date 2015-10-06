@@ -1,0 +1,63 @@
+#!/bin/ruby
+ENV['MPD_HOST'] = '192.168.1.16'
+system 'mpc pause > /dev/null'
+def puttime(sec)
+	sec = sec.round(0)
+	if (sec/60/60) >= 1
+		hour = (sec/60/60).round(0)
+	else
+		hour = 0
+	end
+	sec = sec - (hour * 60 * 60)
+	if (sec/60) >= 1
+		min = (sec/60).round(0)
+	else
+		min = 0
+	end
+	sec = (sec - (min * 60)).round(0)
+	return "Time till alarm: #{hour}h / #{min}m / #{sec}s"
+end
+
+puts 'Enter desired hours of sleep'
+desHour = gets.chomp.to_i
+puts 'Enter desired minutes of sleep'
+desMin = gets.chomp.to_i
+time = Time.now
+desTime = time + (((desHour * 60) + desMin) * 60)
+oldOut = ""
+loop do
+	time = Time.now
+	if time.to_i > desTime.to_i
+		break
+	else
+		newOut = puttime(desTime - time)
+	end
+	if newOut == oldOut
+		sleep 0.2
+	else
+		puts newOut
+	end
+	oldOut = newOut
+end
+
+system 'mpc play > /dev/null'
+
+def stepper()
+	frequency = 5	# Seconds
+	change = 5		# Percentage of volume
+	system 'mpc volume 50 > /dev/null'
+	loop do
+		sleep frequency
+		out = `mpc volume +#{change}`
+		vol = out.split("\n").join.gsub(/^(.*volume:\ )/, '').gsub(/\%.*/,'').to_i
+		puts "Current Volume: #{vol}%"
+		if vol > 70
+			break
+		end
+	end
+end
+
+loop do
+	stepper()
+	sleep(30)
+end

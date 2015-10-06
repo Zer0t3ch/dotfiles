@@ -1,0 +1,5 @@
+#!/bin/bash
+sudo -v
+for p in $(pacman -Qs | grep 'local/' | grep nvidia | cut -d/ -f2 | cut -d\  -f1); do
+	sudo pacman -S --needed --noconfirm $p
+done
