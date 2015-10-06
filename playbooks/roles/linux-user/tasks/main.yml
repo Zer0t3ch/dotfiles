@@ -18,6 +18,7 @@
     - sxhkd
     - openbox
     - lemonbar
+    - yaourt
 
 - name: Symlink dotfiles to $HOME
   file: src=~/dotfiles/home/{{ item }}
