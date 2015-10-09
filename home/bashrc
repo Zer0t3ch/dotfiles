@@ -22,6 +22,9 @@ export DISTRIB_RELEASE=$(uname -r)
 # Quit the script if not an interactive shell
 [ -z "$PS1" ] && return
 
+# SSH-agnet stuff
+eval $(keychain --eval --quiet id_rsa)
+
 
 # Check the window size after each command and, if
 # necessary, update the values of LINES and COLUMNS.
