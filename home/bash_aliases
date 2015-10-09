@@ -1,9 +1,11 @@
 #!/bin/bash
 ####### Setting Savers #######
 ##############################
+alias sudo="sudo "
 alias ls="ls --color=always -h"
 alias lsblk="lsblk --output=label,name,maj:min,ro,size,type,fstype,mountpoint,uuid"
-
+alias steam="HOME=/home/chaos/.steamhome steam"
+alias axel="axel -an 3"
 
 
 ########## Shortcuts ##########
