@@ -1,5 +1,5 @@
 #!/bin/ruby
-devSpeed = 0.8
+devSpeed = "-0.8"
 inputs = `xinput list`
 idList = inputs.split("\n")
 idList.collect! do |s|
@@ -14,5 +14,5 @@ idList.delete('')
 #puts idList
 idList.each do |id|
 	puts id
-	system "xinput set-prop #{id} \"Coordinate Transformation Matrix\" #{devSpeed} 0 0 0 #{devSpeed} 0 0 0 1"
+	system "xinput set-prop #{id} \"libinput Accel Speed\" #{devSpeed}"
 end
