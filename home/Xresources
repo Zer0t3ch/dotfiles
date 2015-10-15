@@ -81,8 +81,8 @@ URxvt*keysym.End:						\033[4~
 
 
 !--- Misc
-URxvt*iso14755:							False
-URxvt*iso14755_52:						False
+!URxvt*iso14755:							False
+!URxvt*iso14755_52:						False
 URxvt*clipboard.copycmd:				xsel -ib
 URxvt*clipboard.pastecmd:				xsel -ob
 URxvt*clipboard.autocopy:				True
