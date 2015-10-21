@@ -20,6 +20,7 @@
     - lemonbar
     - yaourt
     - pacman
+    - awesome
 
 - name: Symlink dotfiles to $HOME
   file: src=~/dotfiles/home/{{ item }}
