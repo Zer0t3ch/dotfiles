@@ -13,16 +13,26 @@ autoload -Uz compinit
 compinit
 # End of lines added by compinstall
 
+
 # =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 
+
+# Startups and autoloads
 [ ! "${TMUX}" ] && byobu && exit
+eval $(keychain --eval --quiet id_rsa_chaos_kstech.tk)
 autoload -U colors && colors
 
+
+# Keybinds
 bindkey '\e[1~' beginning-of-line
 bindkey '\e[4~' end-of-line
 
+
+# Prompt setup
 setopt PROMPT_SUBST
 source ${HOME}/.zprompt
 export PS1='`zprompt`'
 
+
+# Load Aliases
 [ -f ~/.zalias ] && source ~/.zalias
