@@ -33,6 +33,9 @@
     - bash_profile
     - bash_aliases
     - Xresources
+    - zshrc
+    - zalias
+    - zprompt
 
 - name: Symlink scripts/binaries to HOME/bin
   file: src=~/dotfiles/bin/{{ item }}
