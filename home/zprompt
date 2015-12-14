@@ -1,0 +1,11 @@
+zprompt() { for m in $_zp_modules; do eval "_zp_$m"; done; }
+
+_zp_pwd() { echo -ne '%F{red}%~%f'; }
+
+_zp_session_info() { echo -ne '%F{cyan}[%n @ %m]'; }
+
+_zp_prompt() { echo -ne '%B%F{green}%(!.#.$)%f%b '; }
+
+_zp_nl() { echo -ne '\n'; }
+
+export _zp_modules=( nl pwd nl session_info prompt )
