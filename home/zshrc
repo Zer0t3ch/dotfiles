@@ -18,7 +18,6 @@ compinit
 
 
 # Startups and autoloads
-[ ! "${TMUX}" ] && byobu && exit
 eval $(keychain --eval --quiet id_rsa_chaos_kstech.tk)
 autoload -U colors && colors
 
