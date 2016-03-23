@@ -1,0 +1,37 @@
+# Lines configured by zsh-newuser-install
+HISTFILE=~/.zhist
+HISTSIZE=5000
+SAVEHIST=10000
+setopt appendhistory beep nomatch notify
+unsetopt autocd extendedglob
+bindkey -e
+# End of lines configured by zsh-newuser-install
+# The following lines were added by compinstall
+zstyle :compinstall filename '/home/chaos/.zshrc'
+
+autoload -Uz compinit
+compinit
+# End of lines added by compinstall
+
+
+# =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+
+# Startups and autoloads
+eval $(keychain --eval --quiet id_rsa_chaos_kstech.tk)
+autoload -U colors && colors
+
+
+# Keybinds
+bindkey '\e[1~' beginning-of-line
+bindkey '\e[4~' end-of-line
+
+
+# Prompt setup
+setopt PROMPT_SUBST
+source ${HOME}/.zprompt
+export PS1='`zprompt`'
+
+
+# Load Aliases
+[ -f ~/.zalias ] && source ~/.zalias
