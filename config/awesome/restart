@@ -1,0 +1,7 @@
+#!/bin/bash
+if [[ $(awesome -k 2>&1 | grep error) == "" ]]; then
+	echo OKAY
+	echo 'awesome.restart()' | awesome-client
+else
+	echo NO
+fi
