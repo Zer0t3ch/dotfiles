@@ -55,4 +55,4 @@ export PS1='`zprompt`'
 [ -f ~/.zalias ] && source ~/.zalias
 
 # Finishing Startups
-eval $(keychain --eval --quiet id_rsa_chaos_kstech.tk)
+eval $(keychain --eval --quiet id_rsa_chaos_kstech.tk id_rsa)
