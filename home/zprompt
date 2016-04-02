@@ -1,11 +1,17 @@
+[ $(id -u) -eq 0 ] && _zp_isroot=true || _zp_isroot=false
+
 zprompt() { for m in $_zp_modules; do eval "_zp_$m"; done; }
 
 _zp_pwd() { echo -ne '%F{red}%~%f'; }
 
-_zp_session_info() { echo -ne '%F{cyan}[%n @ %m]'; }
+_zp_session_info_00() { echo -ne '%F{cyan}['; }
 
-_zp_prompt() { echo -ne '%B%F{green}%(!.#.$)%f%b '; }
+_zp_session_info_01() { echo -ne '%F{cyan} @ %m]'; }
+
+_zp_prompt() { echo -ne '%B%(!.%F{red}.%F{green})%#%f%b '; }
 
 _zp_nl() { echo -ne '\n'; }
 
-export _zp_modules=( nl pwd nl session_info prompt )
+_zp_user() { echo -ne '%(!.'%B%F{cyan}%n%b'.'%n')'; }
+
+export _zp_modules=( nl pwd nl session_info_00 user session_info_01 prompt )
