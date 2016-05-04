@@ -1,5 +1,19 @@
+#!/bin/zsh
+# vim: ai noet ft=sh ts=4 sts=4
 alias sudo='sudo '
-
-alias ls='ls --color=always'
 alias la='ls -al'
 alias ll='ls -l'
+alias grep='grep --color=always'
+alias ..='cd ..'
+alias ...='cd ../..'
+alias ....='cd ../../..'
+
+if [[ "$(uname)" == "Linux" ]]; then
+	alias ls='ls --color=always'
+	if [ "$(uname -r | grep -ic 'arch')" -gt 0 ]; then
+		alias pkg='yaourt'
+		alias pacman-unlock='sudo rm -f /var/lib/pacman/db.lck'
+		alias pkg-cleanup='sudo pacman -R $(pacman -Qdtq)'
+		alias update='sudo pacman -Syyu'
+	fi
+fi
