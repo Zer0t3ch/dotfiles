@@ -7,7 +7,7 @@
     - .config
     - bin
 
-- name: Symlink configuration files to XDG_CONFIG_HOME
+- name: Symlink configuration files to $XDG_CONFIG_HOME
   file: src=~/dotfiles/config/{{ item }}
         dest=~/.config/{{ item }}
         state=link
@@ -37,6 +37,8 @@
     - zalias
     - zprompt
     - zprofile
+    - tmux.conf
+    - vimrc
 
 - name: Symlink scripts/binaries to HOME/bin
   file: src=~/dotfiles/bin/{{ item }}
