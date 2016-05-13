@@ -4,9 +4,6 @@ alias sudo='sudo '
 alias la='ls -al'
 alias ll='ls -l'
 alias grep='grep --color=always'
-alias ..='cd ..'
-alias ...='cd ../..'
-alias ....='cd ../../..'
 
 if [[ "$(uname)" == "Linux" ]]; then
 	alias ls='ls --color=always'
