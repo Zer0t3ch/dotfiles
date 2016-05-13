@@ -1,3 +1,4 @@
+# vim: ai et ts=4 sts=4 sw=4
 # Lines configured by zsh-newuser-install
 HISTFILE=~/.zhist
 HISTSIZE=5000
@@ -17,7 +18,10 @@ autoload -Uz compinit && compinit
 
 
 # Startups and autoloads
+export SHELL="$(which zsh)"
 autoload -U colors && colors
+[[ $TERM == "screen" ]] &&\
+    export TERM="screen-256color"
 
 
 # Completion
@@ -60,4 +64,4 @@ export PS1='`zprompt`'
 
 # Finishing Startups
 eval $(keychain --eval --quiet id_rsa)
-#[[ -z "${TMUX}" ]] && byobu && exit
+[[ -z "${TMUX}" ]] && ( byobu; exit )
