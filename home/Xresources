@@ -1,6 +1,6 @@
 ! vim: set noet noai ts=4 sts=4 sw=4 ft=xdefaults nowrap:
 !--- General
-URxvt*termName:							rxvt-unicode-256color
+URxvt*termName:							rxvt-256color
 URxvt*iconFile:							/usr/share/icons/Adwaita/scalable/apps/utilities-terminal-symbolic.svg
 URxvt*saveLines:						9999
 
