@@ -4,8 +4,9 @@
 alias sudo="sudo "
 alias ls="ls --color=always -h"
 alias lsblk="lsblk --output=label,name,maj:min,ro,size,type,fstype,mountpoint,uuid"
-alias steam="HOME=/home/chaos/.steamhome steam"
+alias steam="HOME=/home/chaos/.steamhome STEAM_FRAME_FORCE_CLOSE=1 steam"
 alias axel="axel -an 3"
+alias ytdl="youtube-dl --audio-quality=0"
 
 
 ########## Shortcuts ##########
@@ -30,7 +31,7 @@ alias g="git"
 alias sym="ln -s"
 alias pamac="yaourt"
 alias print="echo -ne"
-
+alias ddstatus='sudo pkill -x dd --signal USR1; sleep 1'
 
 ########## Fun Ones ##########
 ##############################

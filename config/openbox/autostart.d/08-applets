@@ -8,7 +8,7 @@ pamac-tray &
 
 
 # NetworkManager
-nm-applet &
+pkill nm-applet && nm-applet &
 
 
 # Bluetooth Management

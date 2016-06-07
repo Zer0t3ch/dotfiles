@@ -1,5 +1,5 @@
 #!/bin/bash
-(sleep 0.1 && feh --bg-tile /home/chaos/Pictures/wallpapers/arch-1.jpg) &
+(sleep 0.1 && nitrogen --set-tiled /home/chaos/Pictures/wallpapers/arch-1.jpg) &
 
 
 echo 10-wallpaper
