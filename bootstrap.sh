@@ -1,6 +1,6 @@
 #!/bin/bash
 cd $(dirname $0)/playbooks
-os=$(uname -o)
+os=$(uname -o 2> /dev/null)
 id=${id:-$(id -u)}
 
 
