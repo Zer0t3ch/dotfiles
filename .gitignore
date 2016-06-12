@@ -26,3 +26,5 @@ backup/
 
 # Ignore log files
 *.log
+
+.DS_Store
