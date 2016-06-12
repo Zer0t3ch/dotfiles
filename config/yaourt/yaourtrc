@@ -58,7 +58,7 @@ USEPAGER=0
 #TERMINALTITLE=1
 
 # Command
-#PACMAN="pacman"
+PACMAN="pacsrv"
 #MAKEPKG="makepkg"
 #DIFFEDITCMD="vimdiff"
 
