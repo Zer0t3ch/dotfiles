@@ -70,5 +70,3 @@ eval $(keychain --eval --quiet id_rsa)
 pwd="$PWD"; cd '/usr/share/zsh/plugins/zsh-syntax-highlighting/'
 [[ -f './zsh-syntax-highlighting.zsh' ]] && source './zsh-syntax-highlighting.zsh'
 cd "$pwd"
-# Start byobu if not already running
-[[ -z "${TMUX}" ]] && ( byobu; exit )
