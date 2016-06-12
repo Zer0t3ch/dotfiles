@@ -1,2 +1,6 @@
 let g:powerline_pycmd="py3"
 set laststatus=2
+imap hh <Esc>
+vmap hh <Esc>
+syntax on
+colo slate
