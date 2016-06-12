@@ -2,5 +2,13 @@ let g:powerline_pycmd="py3"
 set laststatus=2
 imap hh <Esc>
 vmap hh <Esc>
+cmap hh <Esc>
+map  <C-A> <Home>
+imap <C-A> <Home>
+cmap <C-A> <Home>
+map  <C-E> <End>
+imap <C-E> <End>
+cmap <C-E> <End> 
 syntax on
 colo slate
+
