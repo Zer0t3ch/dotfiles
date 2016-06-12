@@ -65,7 +65,8 @@ export PS1='`zprompt`'
 
 
 # Finishing Startups
-eval $(keychain --eval --quiet id_rsa)
+eval $(keychain -q --eval)
+find ~/.ssh -type f -name 'id_*' ! -name '*.pub' -exec keychain -q {} \;
 # Syntax highlighting
 pwd="$PWD"; cd '/usr/local/share/zsh-syntax-highlighting/'
 [[ -f './zsh-syntax-highlighting.zsh' ]] && source './zsh-syntax-highlighting.zsh'
