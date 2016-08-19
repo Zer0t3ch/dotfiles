@@ -1,0 +1,16 @@
+# vim: noet noai ts=4 sts=4
+[user]
+	name = Zachary I. Hill
+	email = zer0t3ch97@gmail.com
+
+[core]
+	editor = vim
+
+[alias]
+	compare = log --left-right --graph --cherry-pick --oneline
+
+[color]
+	status = true
+	branch = true
+	interactive = true
+	diff = true
