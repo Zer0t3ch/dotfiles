@@ -21,6 +21,7 @@
     - yaourt
     - pacman
     - awesome
+    - git
 
 - name: Symlink dotfiles to $HOME
   file: src=~/dotfiles/home/{{ item }}
