@@ -23,6 +23,9 @@ autoload -U colors && colors
 [[ $TERM == "screen" ]] &&\
     export TERM="screen-256color"
 path=(/usr/local/bin ${path} /usr/sbin /sbin)
+brew --prefix coreutils > /dev/null
+[[ $? -eq 0 ]] &&\
+    path=($(brew --prefix coreutils)/libexec/gnubin ${path})
 
 # Completion
 fpath=(/usr/local/share/zsh-completions $fpath)
