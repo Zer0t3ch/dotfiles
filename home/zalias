@@ -11,7 +11,7 @@ if [[ "$(uname)" == "Linux" ]]; then
 		alias pkg='yaourt'
 		alias pacman-unlock='sudo rm -f /var/lib/pacman/db.lck'
 		alias pkg-cleanup='sudo pacman -R $(pacman -Qdtq)'
-		alias update='sudo pacman -Syyu'
+		alias service='sudo systemctl '
 		[[ -x /usr/bin/pacsrv ]] &&\
 			alias pacman='pacsrv'
 	fi
