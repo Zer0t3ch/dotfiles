@@ -11,5 +11,5 @@ map  <C-E> <End>
 imap <C-E> <End>
 cmap <C-E> <End> 
 syntax on
-colo slate
+colo elflord
 
