@@ -1,1 +1,1 @@
-[ ! "${TMUX}" ] && byobu && exit
+export EDITOR=vim
