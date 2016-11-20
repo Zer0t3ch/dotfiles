@@ -8,10 +8,8 @@ if [[ "$(uname)" == "Linux" ]]; then
 	alias grep='grep --color=auto'
 	alias ls='ls --color=auto'
 	if [ "$(uname -r | grep -ic 'arch')" -gt 0 ]; then
-		alias pkg='yaourt'
 		alias pacman-unlock='sudo rm -f /var/lib/pacman/db.lck'
 		alias pkg-cleanup='sudo pacman -R $(pacman -Qdtq)'
-		alias service='sudo systemctl '
 		[[ -x /usr/bin/pacsrv ]] &&\
 			alias pacman='pacsrv'
 	fi
