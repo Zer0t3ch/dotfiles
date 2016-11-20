@@ -60,6 +60,11 @@ source ${HOME}/.zprompt
 export PS1='`zprompt`'
 
 
+# CD Setup
+setopt auto_cd
+cdpath=(. /home/media /home/media/.auto/nzbget)
+
+
 # Load Aliases
 [ -f ~/.zalias ] && source ~/.zalias
 
