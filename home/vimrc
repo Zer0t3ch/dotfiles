@@ -1,6 +1,7 @@
 let g:powerline_pycmd="py3"
 set laststatus=2
 set modeline modelines=5
+nnoremap <leader>r :!%:p
 imap hh <Esc>
 vmap HH <Esc>
 cmap HH <Esc>
