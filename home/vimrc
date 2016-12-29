@@ -9,6 +9,7 @@ cmap <C-A> <Home>
 map  <C-E> <End>
 imap <C-E> <End>
 cmap <C-E> <End> 
+nnoremap <leader>r :!%:p
 syntax on
 colo elflord
 if has("autocmd")
